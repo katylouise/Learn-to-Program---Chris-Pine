@@ -1,0 +1,1 @@
+puts "I am approximately #{60 * 60 * 24 * 365 * 30 + 60 * 60 * 24 * 187 } seconds old."

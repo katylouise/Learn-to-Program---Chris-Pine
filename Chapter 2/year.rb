@@ -1,0 +1,1 @@
+puts "There are #{24 * 365} days in a year."
