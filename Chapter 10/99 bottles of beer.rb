@@ -15,18 +15,6 @@ def english_number(number)
 
 	left = number
 
-	write = left / 1000000
-	left = left - write * 1000000
-
-	if write > 0
-		millions = english_number write
-		num_string = num_string + millions + " million"
-
-		if left > 0
-			num_string = num_string + " "
-		end
-	end
-
 	write = left / 1000
 	left = left - write * 1000
 
@@ -77,10 +65,19 @@ def english_number(number)
 	num_string
 end
 
-puts english_number(17)
-puts english_number(32)
-puts english_number(168)
-puts english_number(1752)
-puts english_number(28654)
-puts english_number(862492)
-puts english_number(87263874)
+def bottles(n)
+	while n > 0
+	  num = english_number(n).capitalize
+	  new_num = english_number(n - 1).capitalize
+	  puts "#{num} bottles of beer on the wall,"
+	  puts "#{num} bottles of beer on the wall,"
+	  puts "You take one down, pass it around,"
+	  puts "#{new_num} bottles of beer on the wall."
+	  puts ""
+	  n -= 1
+	end
+end
+
+bottles(20)
+
+
