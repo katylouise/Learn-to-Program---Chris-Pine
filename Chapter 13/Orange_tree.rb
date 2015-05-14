@@ -44,20 +44,4 @@ class OrangeTree
 end
 
 tree = OrangeTree.new
-puts tree.height
-tree.one_year_passes
-puts tree.height
-puts tree.age
-puts tree.count_the_oranges
-tree.one_year_passes
-puts tree.count_the_oranges
-puts tree.height
-puts tree.age
-tree.one_year_passes
-tree.one_year_passes
-tree.one_year_passes
-puts tree.count_the_oranges
-puts tree.age
-puts tree.height
-tree.pick_an_orange
-puts tree.count_the_oranges
+
