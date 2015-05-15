@@ -1,18 +1,24 @@
+$nesting_depth = -1
 def log(description, &block)
-	puts "Starting #{description}..."
+	$nesting_depth += 1
+	tabs = "\t" * $nesting_depth 
+	puts "#{tabs}Starting #{description}..."
 	result = block.call
-	puts "...#{description} finished, returning: #{result}"
+	puts "#{tabs}...#{description} finished, returning: #{result}"
 	
 	
 end
 
 log("outer block") do
 	log("some little block") do
-		2 + 3
+		log("teeny-tiny block") do
+			"lots of love"
+		end
+		6 * 7
 	end
 
 	log("yet another block") do
-		"I LIKE THAI FOOD!".downcase
+		"I LOVE INDIAN FOOD!".downcase
 	end
-	1 == 2
+	1 == 1
 end
